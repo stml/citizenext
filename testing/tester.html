@@ -6,17 +6,29 @@
 </head>
 <body>
 
-<p>Your current public IP address is <strong><span id="currentip">...</span></strong></p>
-<p>It looks like you're in <strong><span id="currentlocation">...</span></strong></p>
-<p>You're currently browsing <strong><span id="currentlybrowsing">...</span></strong></p>
-<p>The public IP of that site is <strong><span id="currentlybrowsingip">...</span></strong></p>
+
+<p>Your computer says you're at: <strong><span id="nav_location">...</span></strong></p>
+<p>Which would be <strong><span id="nav_address">...</span></strong></p>
+<div id="nav_map"></div>
+
+<p>Your current public IP address is <strong><span id="my_ip">...</span></strong></p>
+<p>So the internet thinks you're in <strong><span id="my_location">...</span></strong></p>
+<div id="my_map"></div>
+
+<p>You're currently browsing <strong><span id="browsing_site">...</span></strong></p>
+<p>The public IP of that site is <strong><span id="browsing_ip">...</span></strong></p>
+<p>Which appears to be in <strong><span id="browsing_location">...</span></strong></p>
+<div id="browsing_map"></div>
 
 <hr>
 
 <p>This page uses:</p>
 <ul>
-<li><a href="https://freegeoip.net/">freegeoip.net</a> to find the locations of IP addresses</li>
+<li>Your browser location is determined by <a href="https://en.wikipedia.org/wiki/W3C_Geolocation_API">the W3C Geolocation API</a></li>
+<li><a href="https://freegeoip.net/">freegeoip.net</a> to find the locations of websites and IP addresses</li>
 <li>Flag icons by <a href="https://www.gosquared.com/resources/flag-icons/">GoSquared</a></li>
+<li>The maps are by <a href="https://www.mapbox.com/">Mapbox</a></li>
+<li>Addresses from latitude and longitude are provided by <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatum (OSM)</a></li>
 </ul>
 
 </body>
