@@ -1,29 +1,28 @@
 var ip;
 var currentlybrowsing;
-var mylocation;
+var my_location;
+var browsing_location;
 
 $( document ).ready(function() {
 	currentlybrowsing = 'http://google.com';
 	$('#currentlybrowsing').html(currentlybrowsing);
-	getIP();
+	getMyLocation();
 	});
 	
-function getIP() {
-	$.getJSON("http://api.ipify.org?format=jsonp&callback=?", function(json) {
-        ip = json.ip;
-      	$('#currentip').html(ip);
-   		getLocation(ip);
-      	});
-	}
-	
 // This function takes an IP or a hostname.
-function getLocation(iphostname) {
+function getMyLocation() {
 	$.getJSON('http://freegeoip.net/json/?callback=?', function (result, textStatus, jqXHR) {
 		//console.log("callback running");
         //console.log(textStatus);
         //console.log(jqXHR);
-        mylocation = result;
-        //console.log(mylocation);
-      	$('#currentlocation').html(mylocation.city+', '+mylocation.region_name+', '+mylocation.country_name+' <img src="../flags/flat/24/'+mylocation.country_code+'.png" />');
+        my_location = result;
+        //console.log(my_location);
+        $('#currentip').html(my_location.ip);
+      	$('#currentlocation').html(my_location.city+', '+my_location.region_name+', '+my_location.country_name+' <img src="../flags/flat/24/'+my_location.country_code+'.png" />');
       	});	
+	}
+	
+function getBrowsingLocation(iphostname) {
+	$.getJSON('http://freegeoip.net/json/?callback=?', function (result, textStatus, jqXHR) {
+		});
 	}
