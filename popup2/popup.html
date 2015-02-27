@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>CitizenExt</title>
+    <link href='popup.css' rel='stylesheet' />
+	<script src="jquery.min.js"></script>
+	<script src="popup2.js"></script>
+  </head>
+  <body>
+
+<h1>Citizen eX <em>test</em></h1>
+
+<div id="container">
+
+<p>Your computer says you're at: <strong><span id="nav_location">...</span></strong></p>
+<p>Which would be <strong><span id="nav_address">...</span></strong></p>
+<div class="map" id="nav_map"></div>
+
+<p>Your current public IP address is <strong><span id="my_ip">...</span></strong></p>
+<p>So the internet thinks you're in <strong><span id="my_location">...</span></strong></p>
+<div class="map" id="my_map"></div>
+
+<p>You're currently browsing <strong><span id="browsing_site">...</span></strong></p>
+<p>The public IP of that site is <strong><span id="browsing_ip">...</span></strong></p>
+<p>Which appears to be in <strong><span id="browsing_location">...</span></strong></p>
+<div class="map" id="browsing_map"></div>
+
+<h3>This part is just an example...</h3>
+
+<p>Based on this information your algorithmic citizenship is: <strong>50%</strong> UK, <strong>50%</strong> USA</p>
+
+<div class="flag" id="your_flag">
+	<img src="joint-flag.png" />
+</div>
+
+<p></p>
+
+<div id="credits">
+
+<h3>How does this work?</h3>
+<ul>
+<li>Your browser location is determined by <a href="https://en.wikipedia.org/wiki/W3C_Geolocation_API">the W3C Geolocation API</a></li>
+<li><a href="https://freegeoip.net/">freegeoip.net</a> is used to find the locations of websites and IP addresses</li>
+<li>The flag icons are by <a href="https://www.gosquared.com/resources/flag-icons/">GoSquared</a></li>
+<li>The maps are by <a href="https://www.mapbox.com/">Mapbox</a></li>
+<li>Addresses from latitude and longitude are provided by <a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatum (OSM)</a></li>
+</ul>
+
+<p>Built by <a href="http://booktwo.org">James Bridle / booktwo.org</a></p>
+
+</div>
+
+</div>
+
+<!--
+TODO:
+Backstretch a map between locations
+Array of visited / actual locations to build percentage profile
+Flag based on locations
+Who can spy on you
+-->
+
+</body>
+
+  </body>
+</html>
+

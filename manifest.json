@@ -1,16 +1,16 @@
 {
+	"name": "Citizen eX",
 	"manifest_version": 2,
-	
-	"name": "CitizenExt",
-	"description": "This extension shows your current algorithmic citizenship statts",
+	"description": "Citizen eXtension",
 	"version": "0.1",
-	
+	"background": {
+		"scripts": ["citizenex.js"]
+	},
 	"browser_action": {
 		"default_icon": "icon.png",
-		"default_popup": "popup.html",
-   		"default_title": "What's your status?"
-		},
+		"default_title": "Citizen eX"
+	},
 	"permissions": [
 		"tabs"
-		]
-	}
+	]
+}
